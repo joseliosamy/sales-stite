@@ -331,7 +331,55 @@
         <p>Este produto não substitui orientações médicas. Em caso de dúvidas sobre saúde, consulte sempre um profissional.</p>
     </footer>
 
+    <!-- Adicione isso ANTES do </body> -->
+    <div class="page-loader">
+        <div class="loader-content">
+        <div class="loader-spinner"></div>
+        </div>
+    </div>
+  
+  
+
     <script>
+        // Pré-carrega a imagem de background
+        function preloadBackground() {
+        return new Promise((resolve) => {
+            const bgSection = document.querySelector('.hero-section');
+            if (!bgSection) return resolve();
+            
+            const bgImage = window.getComputedStyle(bgSection)
+            .backgroundImage
+            .replace(/^url\(["']?/, '')
+            .replace(/["']?\)$/, '');
+            
+            if (!bgImage) return resolve();
+            
+            const img = new Image();
+            img.src = bgImage;
+            img.onload = resolve;
+            img.onerror = resolve;
+        });
+        }
+    
+        // Controla o loading
+        document.addEventListener('DOMContentLoaded', async () => {
+        const loader = document.querySelector('.page-loader');
+        if (!loader) return;
+        
+        // Espera o background + 500ms mínimo (melhor UX)
+        await Promise.all([
+            preloadBackground(),
+            new Promise(resolve => setTimeout(resolve, 500))
+        ]);
+        
+        loader.classList.add('fade-out');
+        
+        // Remove completamente após a animação
+        setTimeout(() => {
+            loader.remove();
+        }, 500);
+        });
+
         // Efeito suave ao rolar
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
