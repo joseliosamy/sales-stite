@@ -1,0 +1,321 @@
+
+  
+  /* ===== RESET MOBILE FIRST ===== */
+  @media screen and (max-width: 767px) {
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+      font-size: 16px;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+  
+    /* ===== HEADER ===== */
+    header {
+      padding: 1.5rem 1rem;
+    }
+    
+    .logo {
+      width: 120px;
+    }
+  
+    /* ===== HERO ===== */
+    .hero {
+      padding: 2rem 1rem;
+      flex-direction: column;
+    }
+    
+    .hero-text {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-image {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    /* ===== BENEFÍCIOS ===== */
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    /* ===== DEPOIMENTOS ===== */
+    .testimonials-slider {
+      padding: 0 1rem;
+    }
+    
+    .testimonial-card {
+      min-width: 85%;
+      padding: 1.5rem;
+    }
+  
+
+    
+    .price {
+      font-size: 2.5rem;
+    }
+  
+    /* ===== FAQ ===== */
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+    
+    .faq-question {
+      padding: 1rem;
+    }
+  
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  }
+  
+
+
+
+
+  /* ===== MEDIA QUERIES PROGRESSIVAS ===== */
+  @media (max-width: 991px) {
+    header{
+      width: 100vw;
+      height: 100%;
+      max-height: none;
+
+    }
+    header .header-content{
+      width: 100%;
+      height: 100%;
+    }
+    header .header-content .header-col{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+    }
+    header .header-content .header-col .header-text{
+      z-index: 1;
+    }
+    header .header-content .header-col .header-text small{
+      font-size: 16px;
+    }
+    header .header-content .header-col .header-text h1{
+      font-size: 30px;
+    }
+    header .header-content .header-col .header-text p{
+      font-size: 17px;
+    }
+    header .header-content .header-col .header-text .button small{
+      font-size: 12px;
+    }
+    header .header-content .header-col .image{
+      position: absolute;
+      top: 0;
+      right: 10%;
+      opacity: 0.4;
+    }
+    .benefits{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .benefits h2{
+      width: 80%;
+      text-align: center;
+    }
+    .benefits .benefits-grid{
+      width: 80%;
+    }
+    .about-product .about-content{
+      width: 80%;
+    }
+    .about-product .about-content .about-text {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    .about-product .about-content .about-text ul{
+      text-align: start;
+    }
+    .about-product .about-content .about-image img{
+      max-width: 280px;
+    }
+    .testimonials .section-title, .testimonials-grid{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .social-proof-section .container{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .offer {
+      padding: 3rem 0 3rem 0;
+    }
+    .offer .offer-container{
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+    .offer .offer-container .grid1{
+      max-width: 90%;
+      margin-top: 30px;
+    }
+    .offer .offer-container .grid1 h1{
+      font-size: 28px;
+    }
+    
+    .hero-image {
+      max-width: 350px;
+    }
+    
+    .testimonial-card {
+      min-width: 70%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header{
+      width: 100vw;
+      height: 100%;
+      max-height: none;
+
+    }
+    header .header-content{
+      width: 100%;
+      height: 100%;
+    }
+    header .header-content .header-col{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+    }
+    header .header-content .header-col .header-text{
+      z-index: 1;
+    }
+    header .header-content .header-col .header-text small{
+      font-size: 16px;
+    }
+    header .header-content .header-col .header-text h1{
+      font-size: 30px;
+    }
+    header .header-content .header-col .header-text p{
+      font-size: 17px;
+    }
+    header .header-content .header-col .header-text .button small{
+      font-size: 12px;
+    }
+    header .header-content .header-col .image{
+      position: absolute;
+      top: 0;
+      right: 10%;
+      opacity: 0.4;
+    }
+    .benefits{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .benefits h2{
+      width: 80%;
+      text-align: center;
+    }
+    .benefits .benefits-grid{
+      width: 80%;
+    }
+    .about-product .about-content{
+      width: 80%;
+    }
+    .about-product .about-content .about-text {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    .about-product .about-content .about-text ul{
+      text-align: start;
+    }
+    .about-product .about-content .about-image img{
+      max-width: 280px;
+    }
+    .testimonials .section-title, .testimonials-grid{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .social-proof-section .container{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .offer {
+      padding: 3rem 0 3rem 0;
+    }
+    .offer .offer-container{
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+    .offer .offer-container .grid1{
+      max-width: 90%;
+      margin-top: 30px;
+    }
+    .offer .offer-container .grid1 h1{
+      font-size: 28px;
+    }
+    
+    .hero-image {
+      max-width: 350px;
+    }
+    
+    .testimonial-card {
+      min-width: 70%;
+    }
+  }
+  
+  @media (max-width: 1156px) {
+    header .header-content .header-col .header-text h1{
+      font-size: 32px;
+    } 
+  }
+  
+
+
+
+
+
+
+
+  /* ===== OTIMIZAÇÕES ESPECÍFICAS ===== */
+  /* Melhoria de performance em animações */
+  @media (prefers-reduced-motion: no-preference) {
+    [class*="-card"] {
+      will-change: transform;
+      transform: translateZ(0);
+    }
+  }
+  
+  /* Ajustes para iOS */
+  @supports (-webkit-touch-callout: none) {
+    input, textarea {
+      font-size: 16px; /* Evita zoom em formulários */
+    }
+  }
+  
+  /* Correção para viewport mobile */
+  @viewport {
+    width: device-width;
+    zoom: 1.0;
+  }

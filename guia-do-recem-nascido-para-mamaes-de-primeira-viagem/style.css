@@ -1,0 +1,673 @@
+ /* Cores suaves para mamães */
+ :root {
+    --primary: #49bda9; /* Rosa suave */
+    --secondary: #70c3d8; /* Azul bebê */
+    --accent: #FF851B; /* Destaque */
+    --light: #FFF5F7; /* Fundo rosado claro */
+    --dark: #2E2E3A; /* Texto */
+    --soft-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--light);
+    overflow-x: hidden;
+}
+
+/* Header com efeito delicado */
+header {
+    width: 100%;
+    height: 100vh;
+    max-height: 720px;
+    /* background: linear-gradient(135deg, var(--primary), var(--secondary)); */
+    /* background-color: #49bda9;
+    background-image: linear-gradient(43deg, #49bda9 0%, #7cefcf 46%, #2bb299 100%); */
+    background-image: url(/images/banner4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.header-col{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+.header-col .image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.header-col .image img{
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+    object-fit: contain;
+}
+
+.header-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+}
+.header-text > small{
+    width: 100%;
+    text-align: start;
+    font-size: 20px;
+}
+.header-text h1 {
+    line-height: 40px;
+}
+.header-text .button{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.header-text .button small{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-text .button small span{
+    font-size: 15px;
+    margin-right: 3px;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+/* Botão principal */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: var(--soft-shadow);
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 133, 27, 0.3);
+    background-color: #c25a00;
+    transform: scale(1.1);
+
+}
+
+/* Seção de benefícios */
+.benefits {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--secondary);
+    margin: 1rem auto 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.benefit-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border-top: 4px solid var(--primary);
+    transition: 0.3s;
+}
+
+
+.benefit-card:hover {
+    transform: scale(1.1);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+/* Seção sobre o produto */
+.about-product {
+    padding: 5rem 1rem;
+    background-color: var(--light);
+    position: relative;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text {
+    padding-right: 2rem;
+}
+.about-text p {
+    margin-bottom: 15px;
+}
+.about-text ul {
+    list-style: inside;
+    padding-left: 0;
+    font-weight: bold;
+}
+
+.about-image {
+    width: 100%;
+
+    border-radius: 12px;
+    overflow: hidden;
+    filter: drop-shadow(0px 20px 7px #0a252748);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 400px;
+    height: auto;
+}
+.about-content > a{
+    max-width: 350px;
+}
+
+/* Depoimentos */
+.testimonials {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--soft-shadow);
+    position: relative;
+    border-left: 4px solid var(--secondary);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.testimonial-text::before {
+    content: '"';
+    font-size: 4rem;
+    color: rgba(255, 126, 185, 0.1);
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    z-index: 0;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+
+ /* Seção de Prova Social */
+ .social-proof-section {
+    padding: 5rem 1rem;
+    background: linear-gradient(135deg, #FFF5F7, #FFFFFF);
+    text-align: center;
+    position: relative;
+}
+
+
+
+.section-title {
+    font-size: 2.2rem;
+    color: #2E2E3A;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #6D6D7A;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(126, 255, 227, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), #7FDBFF);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-suffix {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6D6D7A;
+    margin-bottom: 0.5rem;
+}
+
+.stat-desc {
+    font-size: 1rem;
+    color: #6D6D7A;
+    line-height: 1.4;
+}
+
+.stat-icon {
+    margin-top: 1.5rem;
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+.social-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-logos span {
+    color: #6D6D7A;
+    font-weight: 600;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #FF7EB9;
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .social-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+    }
+}
+
+/* Seção de oferta */
+.offer {
+    padding: 5rem 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+}
+
+.offer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.offer-container .grid1{
+    display: flex;
+    text-align: start;
+    background-color: #ffffff42;
+    padding: 30px;
+}
+.offer-container .grid1 h1{
+    font-size: 40px;
+}
+.offer-container .grid1 h1 span{
+    background-color: #fff;
+    color: var(--primary);
+}
+.offer-container .grid2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #072e4e5e;
+    max-height: 80%;
+    padding: 45px;
+    border-radius: 0 10px 10px 0;
+}
+.offer-container .grid2 small {
+    font-size: 17px;
+    color: #fff;
+}
+.offer-container .grid2 h1 {
+    font-size: 80px;
+}
+.offer-container .grid2 h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.offer-container .grid2 .img{
+    width: 220px;
+    margin-top: 10px;
+}
+.offer-container .grid2 .img img {
+    width: 100%;
+}
+
+
+
+/* Garantia */
+.guarantee {
+    padding: 3rem 1rem;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.guarantee .description {
+    text-align: center;
+    max-width: 500px;
+    font-size: 17px;
+}
+.guarantee-badge {
+
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+.guarantee-badge .img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.guarantee-badge .img img{
+    max-width: 200px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Estilos FAQ - Otimizados para performance */
+.faq-section {
+    padding: 5rem 1rem;
+    background: #FFF5F7;
+    position: relative;
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-main-title {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    background: white;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: left;
+    color: #2E2E3A;
+  }
+  
+  .faq-question:hover {
+    background: #FFF9FB;
+  }
+  
+  .faq-question .icon {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+  }
+  
+  .faq-question[aria-expanded="true"] .icon {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    background: #FFF9FB;
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .answer-content {
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  /* Estilo do Botão CTA */
+  .faq-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .faq-main-title {
+      font-size: 1.8rem;
+    }
+    
+    .faq-question {
+      font-size: 1rem;
+      padding: 1.2rem;
+    }
+    
+    .faq-button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+
+
+/* Rodapé */
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
