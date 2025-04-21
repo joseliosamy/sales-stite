@@ -236,6 +236,8 @@ h1 {
     list-style: inside;
     padding-left: 0;
     font-weight: bold;
+    color: var(--primary);
+    text-shadow: 1px 1px 5px #0c362f17;
 }
 
 .about-image {
@@ -487,15 +489,24 @@ h1 {
     color: var(--primary);
 }
 .offer-container .grid2 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: #072e4e5e;
-    max-height: 80%;
     padding: 45px;
     border-radius: 0 10px 10px 0;
 }
+.offer-container .grid2 p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+
+}
+
 .offer-container .grid2 small {
     font-size: 17px;
     color: #fff;
@@ -657,6 +668,7 @@ h1 {
     animation: spin 1s ease-in-out infinite;
     margin: 0 auto 20px;
   }
+
   
   @keyframes spin {
     to { transform: rotate(360deg); }
