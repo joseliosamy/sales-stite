@@ -88,7 +88,11 @@
     function copiarEmail() {
         const email = 'foto10.contato@gmail.com';
         navigator.clipboard.writeText(email).then(() => {
+            if (window.innerWidth <= 767) {
+            // Abre o aplicativo de email apenas em mobile
             window.location.href = `mailto:${email}`;
+        } else {
+        }
         });
     }
 </script>
