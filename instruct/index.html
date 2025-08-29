@@ -57,7 +57,7 @@
             <div class="step">
                 <div class="step-number final">4</div>
                 <div class="step-content">
-                    <h3>Receba as fotos transformadas no E-mail!</h3>
+                    <h3>Aguarde para receber todas as fotos transformadas no E-mail!</h3>
                     <p>Você receberá um E-mail com todas as fotos enviadas após a transformação feita pela nossa equipe.</p>
                 </div>
             </div>
@@ -88,7 +88,7 @@
     function copiarEmail() {
         const email = 'foto10.contato@gmail.com';
         navigator.clipboard.writeText(email).then(() => {
-        
+            window.location.href = `mailto:${email}`;
         });
     }
 </script>
